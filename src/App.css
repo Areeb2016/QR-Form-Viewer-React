@@ -71,6 +71,7 @@
 }
 
 .qrField {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -78,7 +79,7 @@
   border: 1px solid #dededf;
   margin-top: 10px;
   margin-right: 20px;
-  min-width: 247px;
+  min-width: 248px;
   padding: 10px;
 }
 
@@ -106,6 +107,7 @@
 .form-main {
   border: 1px solid #dededf;
   padding: 50px;
+  min-width: 858px;
 }
 
 .img-container {
@@ -129,4 +131,14 @@
   align-items: center;
   width: 100px;
   height: 100px;
+}
+
+.icon-Styling {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.img-container:hover .icon-Styling {
+  display: block;
 }

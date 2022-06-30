@@ -4,6 +4,7 @@ import "./App.css";
 import { io } from "socket.io-client";
 import { QRCodeSVG } from "qrcode.react";
 import { Spinner } from "react-activity";
+import { IoIosCloseCircle } from "react-icons/io";
 import "react-activity/dist/library.css";
 
 function App() {
@@ -115,6 +116,15 @@ function App() {
                       alt=""
                       className="img-style"
                     />
+                    <IoIosCloseCircle
+                      onClick={() => {
+                        setData(null);
+                        setFUpload(false);
+                      }}
+                      className="icon-Styling"
+                      color="black"
+                      size={20}
+                    />
                   </div>
                 ) : !data && !fupload ? (
                   <QRCodeSVG ref={qrFront} value="Front" size="100px" />
@@ -132,6 +142,15 @@ function App() {
                       src={`data:image/png;base64, ${back.base64}`}
                       alt=""
                       className="img-style"
+                    />
+                    <IoIosCloseCircle
+                      onClick={() => {
+                        setBack(null);
+                        setBUpload(false);
+                      }}
+                      className="icon-Styling"
+                      color="black"
+                      size={20}
                     />
                   </div>
                 ) : !back && !bupload ? (
@@ -152,6 +171,15 @@ function App() {
                       src={`data:image/png;base64, ${passport.base64}`}
                       alt=""
                       className="img-style"
+                    />
+                    <IoIosCloseCircle
+                      onClick={() => {
+                        setPassport(null);
+                        setPUpload(false);
+                      }}
+                      className="icon-Styling"
+                      color="black"
+                      size={20}
                     />
                   </div>
                 ) : !passport && !pupload ? (
